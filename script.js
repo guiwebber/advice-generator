@@ -4,7 +4,7 @@ const botao = document.getElementById("slip");
 const texto = document.querySelector(".texto");
 const advice = document.querySelector(".advice");
 let advices = 0;
-
+window.addEventListener('load', chamaFetch())
 
 function chamaFetch() {
   fetch(url).then((response) => {
@@ -17,8 +17,6 @@ function chamaFetch() {
   });
 }
 
-
 botao.addEventListener("click", () => {
   chamaFetch();
 });
-chamaFetch();
